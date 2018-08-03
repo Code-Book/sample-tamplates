@@ -1,0 +1,38 @@
+{
+    "name": "Firebase Cloud Using Typescript",
+    "author": "Sanchit Gupta",
+    "email": "gupta.sanchit90@gmail.com",
+    "version": "1.0.0",
+    "description": {
+        "short": "Generate code for Firebase Cloud Using Typescript",
+        "long": "Generate code for Firebase Cloud Using Typescript"
+    },
+    "languages": [
+        "Javascript",
+        "Typescript"
+    ],
+    "frameworks": [
+        "Firebase"
+    ],
+    "tags": [
+        "Firebase",
+        "Cloud",
+        "Typescript"
+    ],
+    "parameters": [
+        {
+            "type": "input",
+            "name": "distFolder",
+            "title": "Destination Folder",
+            "message": "Absolute directory path, leave blank to use default directory"
+        }
+    ],
+    "actions": [
+        {
+            "type": "addMany",
+            "destination": "{{__destinationDir distFolder}}/",
+            "templateFiles": "{{__templatePath}}/code/**",
+            "base": "{{__templatePath}}/code/"
+        }
+    ]
+}
