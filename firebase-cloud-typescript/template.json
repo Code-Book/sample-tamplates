@@ -22,6 +22,7 @@
     "parameters": [
         {
             "type": "input",
+            "subType": "dir",
             "name": "distFolder",
             "title": "Destination Folder",
             "message": "Absolute directory path, leave blank to use default directory"
