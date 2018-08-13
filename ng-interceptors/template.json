@@ -1,0 +1,44 @@
+{
+    "name": "Angular Interceptors",
+    "author": "Sanchit Gupta",
+    "email": "gupta.sanchit90@gmail.com",
+    "version": "1.0.0",
+    "description": {
+        "short": "Different Angular Interceptors",
+        "long": "Different Angular Interceptors"
+    },
+    "languages": [
+        "Javascript",
+        "Typescript"
+    ],
+    "frameworks": [
+        "Angular"
+    ],
+    "tags": [
+        "Angular",
+        "Typescript",
+        "HTTP",
+        "Interceptor"
+    ],
+    "parameters": [
+        {
+            "type": "input",
+            "subType": "dir",
+            "name": "distFolder",
+            "title": "Destination Folder",
+            "message": "Absolute directory path, leave blank to use default directory"
+        }
+    ],
+    "actions": [
+        {
+            "type": "add",
+            "path": "{{__destinationDir distFolder}}/http.request.interceptor.ts",
+            "templateFile": "{{__templatePath}}/_request_interceptor.ts"
+        },
+        {
+            "type": "add",
+            "path": "{{__destinationDir distFolder}}/http.response.interceptor.ts",
+            "templateFile": "{{__templatePath}}/_response_interceptor.ts"
+        }
+    ]
+}
