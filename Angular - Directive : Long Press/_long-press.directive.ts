@@ -1,17 +1,10 @@
+import { Directive, EventEmitter, HostBinding, HostListener, Input, Output } from '@angular/core';
 
-import {
-  Directive,
-  Input,
-  Output,
-  EventEmitter,
-  HostBinding,
-  HostListener
-} from '@angular/core';
 
 @Directive({
-  selector: '[long-press]' // Attribute selector
+  selector: '[{{dashCase selectorName}}]'
 })
-export class LongPressDirective {
+export class {{properCase selectorName}}Directive {
 
   @Input() duration: number = 500;
 

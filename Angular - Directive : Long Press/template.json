@@ -24,6 +24,12 @@
     "parameters": [
         {
             "type": "input",
+            "name": "selectorName",
+            "title": "Selector Name",
+            "message": "Enter Selector Name, you will be able to use this name for using this directive"
+        },
+        {
+            "type": "input",
             "name": "distFolder",
             "subType": "dir",
             "title": "Destination Folder",
@@ -33,7 +39,7 @@
     "actions": [
         {
             "type": "add",
-            "path": "{{__destinationDir distFolder}}/long-press.directive.ts",
+            "path": "{{__destinationDir distFolder}}/{{dashCase selectorName}}.directive.ts",
             "templateFile": "{{__templatePath}}/_long-press.directive.ts"
         }
     ]
