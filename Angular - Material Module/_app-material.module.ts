@@ -9,13 +9,14 @@ import {
     MatTabsModule, MatToolbarModule, MatTooltipModule
 } from '@angular/material';
 import { BrowserModule } from '@angular/platform-browser';
+{{#if useAnimations}}
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+{{/if}}
 
 @NgModule({
     imports: [
         BrowserModule,
-        BrowserAnimationsModule,
-        MatAutocompleteModule,
+        {{#if useAnimations}}BrowserAnimationsModule,{{/if}}MatAutocompleteModule,
         MatButtonModule,
         MatButtonToggleModule,
         MatCardModule,

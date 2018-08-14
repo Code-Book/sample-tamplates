@@ -27,6 +27,13 @@
             "subType": "dir",
             "title": "Destination Folder",
             "message": "Absolute directory path, leave blank to use default directory"
+        },
+        {
+            "type": "checkbox",
+            "name": "useAnimations",
+            "title": "Using Animations ?",
+            "message": "This will include `BrowserAnimationsModule`",
+            "default": true
         }
     ],
     "actions": [
