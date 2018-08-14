@@ -32,6 +32,20 @@
             "message": "Enter Feature Name, this will be used for naming your awesome feature store"
         },
         {
+            "type": "default",
+            "name": "actionNames",
+            "subType": "array",
+            "title": "Action Names",
+            "message": "Enter the name of Actions you want to generate (Comma separated)"
+        },
+        {
+            "type": "checkbox",
+            "name": "generateEffects",
+            "title": "Generate Effects for all Actions ?",
+            "message": "This will create placeholder for all actions mentioned above",
+            "default": true
+        },
+        {
             "type": "input",
             "name": "distFolder",
             "subType": "dir",

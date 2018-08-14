@@ -1,35 +1,18 @@
 import { Action } from '@ngrx/store';
 
-/**
- * Good Action hygiene
- * 1. Actions names should be readable and easy to debug
- * 2. Actions should be unique for an intent
- * 3. Payload should be an Object instead of using the variable directly
- */
+{{#each (__toArray actionNames)}}
+export const {{constantCase this}} = '[{{ titleCase ../name }}] {{sentenceCase this}}';
+{{/each}}
 
-export const GET = '[{{ titleCase name }}] Get';
-export const GET_SUCCESS = '[{{ titleCase name }}] Get Success';
-export const GET_ERROR = '[{{ titleCase name }}] Get Error';
-
-// Create actions with or without payload
-export class GetAction implements Action {
-  readonly type = GET;
-}
-
-export class GetSuccessAction implements Action {
-  readonly type = GET_SUCCESS;
+{{#each (__toArray actionNames)}}
+export class {{properCase this}}Action implements Action {
+  readonly type = {{constantCase this}};
 
   constructor(public payload: any) { }
 }
 
-export class GetErrorAction implements Action {
-  readonly type = GET_ERROR;
+{{/each}}
 
-  constructor(public payload: any) { }
-}
-
-// Export created actions
 export type Actions =
-  | GetAction
-  | GetSuccessAction
-  | GetErrorAction;
+{{#each (__toArray actionNames)}}
+| {{properCase this}}Action{{/each}};
