@@ -1,0 +1,35 @@
+{
+    "name": "{{ templateName }}",
+    "author": "{{ author }}",
+    "email": "{{ email }}",
+    "version": "{{ version }}",
+    "description": {
+        "short": "{{description_short}}",
+        "long": "{{description_long}}"
+    },
+    "languages": [
+        {{#if languages}}
+            {{#each (__toArray languages)}}
+            "{{this}}"{{#if @last}}{{else}},{{/if}}
+            {{/each}}
+        {{/if}}
+    ],
+    "frameworks": [
+        {{#if frameworks}}
+            {{#each (__toArray frameworks)}}
+            "{{this}}"{{#if @last}}{{else}},{{/if}}
+            {{/each}}
+        {{/if}}
+    ],
+    "tags": [
+        {{#if tags}}
+            {{#each (__toArray tags)}}
+            "{{this}}"{{#if @last}}{{else}},{{/if}}
+            {{/each}}
+        {{/if}}
+    ],
+    "parameters": [
+    ],
+    "actions": [
+    ]
+}

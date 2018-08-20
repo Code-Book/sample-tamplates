@@ -1,0 +1,96 @@
+{
+    "name": "CodeBook - Template",
+    "author": "Sanchit Gupta",
+    "email": "gupta.sanchit90@gmail.com",
+    "version": "1.0.0",
+    "description": {
+        "short": "Generate template for CodeBook",
+        "long": "Generate template for CodeBook"
+    },
+    "languages": [
+        "Json"
+    ],
+    "frameworks": [
+        "CodeBook"
+    ],
+    "tags": [
+        "CodeBook",
+        "Template"
+    ],
+    "parameters": [
+        {
+            "type": "input",
+            "name": "templateName",
+            "title": "Template Name",
+            "required": true
+        },
+        {
+            "type": "input",
+            "name": "author",
+            "title": "Your Name",
+            "required": true
+        },
+        {
+            "type": "input",
+            "name": "email",
+            "title": "Your Email",
+            "required": true
+        },
+        {
+            "type": "input",
+            "name": "version",
+            "title": "Template Version",
+            "default": "1.0.0",
+            "required": true
+        },
+        {
+            "type": "input",
+            "name": "description_short",
+            "title": "Short Description",
+            "required": true
+        },
+        {
+            "type": "default",
+            "name": "description_long",
+            "subType": "textarea",
+            "title": "Long Description",
+            "required": false
+        },
+        {
+            "type": "default",
+            "name": "languages",
+            "subType": "array",
+            "title": "Languages",
+            "required": false
+        },
+        {
+            "type": "default",
+            "name": "frameworks",
+            "subType": "array",
+            "title": "Frameworks",
+            "required": false
+        },
+        {
+            "type": "default",
+            "name": "tags",
+            "subType": "array",
+            "title": "Tags",
+            "required": false
+        },
+        {
+            "type": "input",
+            "name": "distFolder",
+            "subType": "dir",
+            "title": "Destination Folder",
+            "message": "Absolute directory path, leave blank to use default directory",
+            "required": false
+        }
+    ],
+    "actions": [
+        {
+            "type": "add",
+            "path": "{{__destinationDir distFolder}}/{{templateName}}/template.json",
+            "templateFile": "{{__templatePath}}/_template.json"
+        }
+    ]
+}
