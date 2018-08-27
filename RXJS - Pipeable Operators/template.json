@@ -1,0 +1,46 @@
+{
+    "name": "RXJS - Pipeable Operators",
+    "author": "Sanchit Gupta",
+    "email": "gupta.sanchit90@gmail.com",
+    "version": "1.0.0",
+    "description": {
+        "short": "RXJS - Pipeable Operators",
+        "long": "Creating custom RXJS - Pipeable Operators"
+    },
+    "languages": [
+        "Typescript",
+        "Javascript"
+    ],
+    "frameworks": [
+        "RXJS"
+    ],
+    "tags": [
+        "RXJS",
+        "Pipeable Operators"
+    ],
+    "parameters": [
+        {
+            "type": "default",
+            "name": "operatorNames",
+            "subType": "array",
+            "title": "Operator Names",
+            "message": "Enter the name of Operators you want to generate (Comma separated)",
+            "required": true
+        },
+        {
+            "type": "input",
+            "name": "distFolder",
+            "subType": "dir",
+            "title": "Destination Folder",
+            "message": "Absolute directory path, leave blank to use default directory",
+            "required": false
+        }
+    ],
+    "actions": [
+        {
+            "type": "add",
+            "path": "{{__destinationDir distFolder}}/custom.operator.ts",
+            "templateFile": "{{__templatePath}}/_custom.operator.ts"
+        }
+    ]
+}
