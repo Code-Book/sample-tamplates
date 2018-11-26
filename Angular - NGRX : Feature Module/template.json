@@ -36,7 +36,7 @@
             "name": "actionNames",
             "subType": "array",
             "title": "Action Names",
-            "message": "Enter the name of Actions you want to generate (Comma separated)"
+            "message": "Enter the name of Actions you want to generate"
         },
         {
             "type": "checkbox",

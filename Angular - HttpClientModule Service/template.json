@@ -23,8 +23,8 @@
             "type": "default",
             "name": "item",
             "subType": "array",
-            "title": "Operator Names",
-            "message": "Enter the name of Operators you want to generate (Comma separated)",
+            "title": "Operators",
+            "message": "Enter the name of Operators you want to generate",
             "required": true
         },
         {
