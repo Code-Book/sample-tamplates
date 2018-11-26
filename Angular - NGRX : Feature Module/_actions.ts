@@ -1,10 +1,10 @@
 import { Action } from '@ngrx/store';
 
-{{#each (__toArray actionNames)}}
+{{#each actionNames}}
 export const {{constantCase this}} = '[{{ titleCase ../name }}] {{sentenceCase this}}';
 {{/each}}
 
-{{#each (__toArray actionNames)}}
+{{#each actionNames}}
 export class {{properCase this}}Action implements Action {
   readonly type = {{constantCase this}};
 
@@ -14,5 +14,5 @@ export class {{properCase this}}Action implements Action {
 {{/each}}
 
 export type Actions =
-{{#each (__toArray actionNames)}}
+{{#each actionNames}}
 | {{properCase this}}Action{{/each}};

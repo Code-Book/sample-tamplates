@@ -9,21 +9,21 @@
     },
     "languages": [
         {{#if languages}}
-            {{#each (__toArray languages)}}
+            {{#each languages}}
             "{{this}}"{{#if @last}}{{else}},{{/if}}
             {{/each}}
         {{/if}}
     ],
     "frameworks": [
         {{#if frameworks}}
-            {{#each (__toArray frameworks)}}
+            {{#each frameworks}}
             "{{this}}"{{#if @last}}{{else}},{{/if}}
             {{/each}}
         {{/if}}
     ],
     "tags": [
         {{#if tags}}
-            {{#each (__toArray tags)}}
+            {{#each tags}}
             "{{this}}"{{#if @last}}{{else}},{{/if}}
             {{/each}}
         {{/if}}

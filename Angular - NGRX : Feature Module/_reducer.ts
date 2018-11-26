@@ -4,7 +4,7 @@ import { {{ properCase name }}State, initial{{ properCase name }}State } from '.
 export function {{camelCase name}}Reducer(state = initial{{ properCase name }}State, action: {{ camelCase name }}.Actions): {{ properCase name }}State {
   switch (action.type) {
 
-    {{#each (__toArray actionNames)}}
+    {{#each actionNames}}
     case {{ camelCase ../name }}.{{constantCase this}}: {
       return {
         ...state

@@ -8,7 +8,7 @@ import * as {{ camelCase name }} from './{{ dashCase name }}.actions';
 export class {{ properCase name }}Effects {
 
   {{#if generateEffects}}
-  {{#each (__toArray actionNames)}}
+  {{#each actionNames}}
   @Effect({dispatch : false}) {{camelCase this}}$ = this.actions$
     .pipe(
       ofType({{ camelCase ../name }}.{{constantCase this}}),

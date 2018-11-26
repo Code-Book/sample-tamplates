@@ -1,6 +1,6 @@
 import { Observable } from 'rxjs';
 
-{{#each (__toArray operatorNames)}}
+{{#each operatorNames}}
 const {{camelCase this}} = () => <T>(source: Observable<T>) =>
     new Observable<T>(observer => {
     return source.subscribe({
