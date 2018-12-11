@@ -1,0 +1,19 @@
+{
+  "name": "{{ dashCase name }}",
+  "version": "1.0.0",
+  "description": "{{description}}",
+  "module": "src/index.js",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "dev": "webpack --display-error-details --mode development",
+    "build": "webpack --display-error-details --mode production"
+  },
+  "author": "{{ author }}",
+  "license": "ICS",
+  "devDependencies": {
+    "redux": "^4.0.1",
+    "redux-thunk": "^2.3.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
