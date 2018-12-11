@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{{titleCase name}}</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux/4.0.1/redux.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/redux-thunk/2.3.0/redux-thunk.min.js"></script>
+
+    <script src="../dist/{{dashCase name}}.js"></script>
+
+</head>
+
+<body>
+
+    <input onclick="{{camelCase name}}.startDemo()" value="Start Demo" type="button" />
+
+    <pre id="output"></pre>
+
+    <script>
+
+        window.onload = (event) => {
+            {{camelCase name}}.init()
+
+            {{camelCase name}}.getStoreInstance().subscribe(() => {
+                document.getElementById('output').innerHTML = JSON.stringify({{camelCase name}}.getStoreInstance().getState(), null, 4);
+            })
+        };
+
+    </script>
+</body>
+
+</html>
